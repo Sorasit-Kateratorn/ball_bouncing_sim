@@ -15,12 +15,17 @@ ypos = []
 vx = []
 vy = []
 ball_color = []
-ball.initilizing(xpos, ypos, vx, vy, ball_color, canvas_width, canvas_height, ball_radius, num_balls)
+ball.initilizing(xpos, ypos, vx, vy, ball_color, canvas_width,
+                 canvas_height, ball_radius, num_balls)
+
+# for i in range(num_balls):
+#     ball.draw_circle(ball_color[i], ball_radius, xpos[i], ypos[i])
 while (True):
     turtle.clear()
     for i in range(num_balls):
         ball.draw_circle(ball_color[i], ball_radius, xpos[i], ypos[i])
-        ball.move_circle(i, xpos, ypos, vx, vy, canvas_width, canvas_height, ball_radius)
+        ball.move_circle(i, xpos, ypos, vx, vy, canvas_width,
+                         canvas_height, ball_radius)
     turtle.update()
 
 # hold the window; close it by clicking the window close 'x' mark
