@@ -49,28 +49,3 @@ class BallManager:
             turtle.begin_fill()
             turtle.circle(self.ball_radius)
             turtle.end_fill()
-
-
-def main():
-    canvas_width = 800
-    canvas_height = 600
-    ball_radius = 20
-    num_balls = 3
-
-    turtle.speed(0)
-    turtle.hideturtle()
-    turtle.bgcolor("white")
-    turtle.title("Bouncing Balls")
-
-    ball_manager = BallManager(
-        canvas_width, canvas_height, ball_radius, num_balls)
-
-    for _ in range(100):
-        ball_manager.move()
-        ball_manager.draw()
-
-    turtle.done()
-
-
-if __name__ == "__main__":
-    main()
